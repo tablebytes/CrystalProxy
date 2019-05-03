@@ -14,9 +14,9 @@ app.use('/restaurants/:id', express.static(path.join(__dirname, '../public')));
 // const axios3001 = axios.create({
   //   baseURL: 'http://54.161.138.158',
   // });
-const axios3002 = axios.create({
-  baseURL: 'http://18.224.157.232',
-});
+// const axios3002 = axios.create({
+//   baseURL: 'http://18.224.157.232',
+// });
 // const axios3003 = axios.create({
 //   baseURL: 'http://35.165.224.178',
 // });
@@ -48,8 +48,14 @@ const axios3002 = axios.create({
 //     .catch(error => res.send(error));
 // });
 
+// app.get('/api/restaurants/:id/photos', (req, res) => {
+//   axios3002.get(`/api/restaurants/${req.params.id}/photos`)
+//     .then(response => res.send(response.data))
+//     .catch(error => res.send(error));
+// });
+
 app.get('/api/restaurants/:id/photos', (req, res) => {
-  axios3002.get(`/api/restaurants/${req.params.id}/photos`)
+  axios.get(`http://18.224.157.232/api/restaurants/${req.params.id}/photos`)
     .then(response => res.send(response.data))
     .catch(error => res.send(error));
 });
