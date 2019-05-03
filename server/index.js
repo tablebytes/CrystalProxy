@@ -15,7 +15,7 @@ app.use('/restaurants/:id', express.static(path.join(__dirname, '../public')));
   //   baseURL: 'http://54.161.138.158',
   // });
 const axios3002 = axios.create({
-  baseURL: 'http://localhost:3002/',
+  baseURL: 'http://18.224.157.232',
 });
 // const axios3003 = axios.create({
 //   baseURL: 'http://35.165.224.178',
